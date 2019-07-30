@@ -1,0 +1,98 @@
+{
+  "name": "broadage-widget-react",
+  "version": "1.0.0",
+  "description": "Broadage widgets react wrapper",
+  "scripts": {
+    "build": "./node_modules/.bin/babel src --out-dir lib",
+    "dist": "NODE_ENV=production ./node_modules/.bin/babel src --out-dir dist"
+  },
+  "author": "webyonet <webyonet@hotmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "main": "lib/index.js",
+  "homepage": "https://www.broadage.com",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:webyonet/broadage-widget-react.git"
+  },
+  "dependencies": {
+    "deep-equal": "^1.0.1",
+    "prop-types": "^15.7.2",
+    "react-addons-shallow-compare": "^15.6.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-function-bind": "^7.2.0",
+    "@babel/plugin-syntax-class-properties": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-syntax-import-meta": "^7.2.0",
+    "@babel/plugin-syntax-object-rest-spread": "^7.2.0",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "@babel/plugin-transform-flow-comments": "^7.5.5",
+    "@babel/plugin-transform-flow-strip-types": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.2",
+    "babel-helper-evaluate-path": "^0.5.0",
+    "babel-plugin-minify-numeric-literals": "^0.4.3",
+    "babel-plugin-transform-merge-sibling-variables": "^6.9.4",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "babel-plugin-transform-remove-debugger": "^6.9.4",
+    "babel-preset-minify": "^0.5.0",
+    "eslint": "^6.1.0",
+    "eslint-config-babel": "^9.0.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-flowtype": "^3.12.1",
+    "eslint-plugin-jsx-control-statements": "^2.2.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "keywords": [
+    "broadage",
+    "broadage widget",
+    "broadage widget react"
+  ],
+  "deprecated": false,
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "loose": true
+        }
+      ],
+      "@babel/preset-flow",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ],
+      "@babel/plugin-syntax-object-rest-spread",
+      "@babel/plugin-syntax-dynamic-import",
+      "@babel/plugin-syntax-import-meta",
+      "@babel/plugin-proposal-function-bind",
+      "@babel/plugin-transform-arrow-functions",
+      "@babel/plugin-transform-flow-comments",
+      "@babel/plugin-transform-flow-strip-types"
+    ],
+    "env": {
+      "production": {
+        "presets": [
+          "minify"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "arrowFunctions": true,
+      "binaryLiterals": true,
+      "blockBindings": true,
+      "classes": true,
+      "defaultParams": true,
+      "destructuring": true,
+      "forOf": true,
+      "generators": true,
+      "modules": true,
+      "objectLiteralComputedProperties": true,
+      "objectLiteralDuplicateProperties": true,
+      "objectLiteralShorthandMethods": true,
+      "objectLiteralShorthandProperties": true,
+      "octalLiterals": true,
+      "regexUFlag": true,
+      "regexYFlag": true,
+      "spread": true,
+      "superInFunctions": true,
+      "templateStrings": true,
+      "unicodeCodePointEscapes": true,
+      "globalReturn": true,
+      "jsx": true,
+      "legacyDecorators": true
+    }
+  },
+  "rules": {
+    "no-useless-escape": 1,
+    "no-extra-parens": 0,
+    "no-undef": 2,
+    "no-console": 1,
+    "no-unused-vars": [2, { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    "no-invalid-this": 0,
+    "arrow-parens": [2, "as-needed", { "requireForBlockBody": false }],
+    "no-case-declarations": 1,
+    "quotes": [2, "single", {"avoidEscape": true, "allowTemplateLiterals": true}],
+    "react/display-name": 0,
+    "react/jsx-quotes": [0, "single"],
+    "react/jsx-no-undef": [2, { "allowGlobals": true }],
+    "react/jsx-sort-props": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/no-string-refs": 2,
+    "react/no-did-mount-set-state": 2,
+    "react/no-did-update-set-state": 2,
+    "react/no-multi-comp": 2,
+    "react/no-unknown-property": 2,
+    "react/prop-types": 2,
+    "react/react-in-jsx-scope": 2,
+    "react/self-closing-comp": 2,
+    "react/wrap-multilines": [0, {"declaration": true, "assignment": true, "return": true, "arrow": true}],
+    "react/jsx-no-duplicate-props": 2,
+    "react/style-prop-object": 2,
+    "jsx-control-statements/jsx-choose-not-empty": 2,
+    "jsx-control-statements/jsx-for-require-each": 2,
+    "jsx-control-statements/jsx-for-require-of": 2,
+    "jsx-control-statements/jsx-if-require-condition": 2,
+    "jsx-control-statements/jsx-otherwise-once-last": 2,
+    "jsx-control-statements/jsx-use-if-tag": 2,
+    "jsx-control-statements/jsx-when-require-condition": 2,
+    "jsx-control-statements/jsx-jcs-no-undef": 2,
+    "flowtype/space-after-type-colon": [0, "newer"],
+    "flowtype/use-flow-type": 1,
+    "flowtype/valid-syntax": 2,
+    "flowtype/type-id-match": [2, "^([A-Z][a-z0-9]*)"],
+    "flowtype/require-return-type": [1, "always", {"annotateUndefined":"always", "excludeArrowFunctions": true, "excludeMatching": ["render"]}],
+    "flowtype/require-parameter-type": [1, {"excludeArrowFunctions": true}],
+    "flowtype/no-dupe-keys": 2,
+    "flowtype/no-types-missing-file-annotation": 0,
+    "max-len": 0,
+    "no-use-before-define": [2, { "functions": false, "classes": true, "variables": true }],
+    "prefer-const": 0,
+    "react-hooks/rules-of-hooks": 2
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "jasmine": true,
+    "jsx-control-statements/jsx-control-statements": true
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "jsx-control-statements",
+    "flowtype",
+    "react-hooks"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-control-statements/recommended",
+    "plugin:flowtype/recommended",
+    "babel"
+  ],
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": false
+    },
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "16.0"
+    }
+  }
+}

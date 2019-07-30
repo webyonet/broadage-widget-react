@@ -9,7 +9,7 @@ Broadage widgets react wrapper
 
 ### Products and Documentations
 
-[Main Page](https://developers.broadage.com)
+[Main Page](https://www.broadage.com)
 <br/>
 [Developers Guide](https://developers.broadage.com)
 <br/>

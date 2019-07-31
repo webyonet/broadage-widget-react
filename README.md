@@ -22,6 +22,10 @@ import React, { Component } from 'react';
 import BroadageWidget from 'broadage-widget-react';
 
 export class SampleSoccerFixture extends Component {
+     onActionCallback = (widgetType, actionType, actionPayload) => {
+        console.log(widgetType, actionType, actionPayload);
+     };
+    
      render() {
          // Soccer Fixture Sample
          return (
@@ -32,12 +36,18 @@ export class SampleSoccerFixture extends Component {
                  bundleId="soccer-fx"
                  accountId="0000-0000-0000"
                  className="widget-wrapper"
+                 queryStringParse={{ tournamentId: "tid" }}
+                 onActionCallback={this.onActionCallback}
              />
          )
      }
 }
 
 export class SampleBasketballMatchCenter extends Component {
+     onActionCallback = (widgetType, actionType, actionPayload) => {
+         console.log(widgetType, actionType, actionPayload);
+     };
+     
      render() {
          // Basketball Match Center Sample
          return (
@@ -48,6 +58,8 @@ export class SampleBasketballMatchCenter extends Component {
                  bundleId="basketball-mc"
                  accountId="0000-0000-0000"
                  className="widget-wrapper"
+                 queryStringParse={{ matchId: "mid" }}
+                 onActionCallback={this.onActionCallback}
              />
          )
      }
@@ -57,11 +69,13 @@ export class SampleBasketballMatchCenter extends Component {
 
 ### Props
 
-| Name                               | Type        | Description                                                         |
-|------------------------------------|-------------|---------------------------------------------------------------------|
-|`requiredFields`                    | Object      | Mandatory fields for widget in work are defined in this field       |
-|`options`   (optional using)        | Object      | Language, theme, etc. properties are assigned in this field.        |
-|`widget`                            | String      | The type of widget is define in this field                          |
-|`bundleId`                          | String      | The widget bundle id is define in this field                        |
-|`accountId`                         | String      | Broadage account number is defined in this field                    |
-|`className` (optional using)        | String      | Assigns class name to main container                                |
+| Name                               | Type        | Description                                                                        |
+|------------------------------------|-------------|------------------------------------------------------------------------------------|
+|`requiredFields`                    | Object      | Mandatory fields for widget in work are defined in this field                      |
+|`options`   (optional using)        | Object      | Language, theme, etc. properties are assigned in this field.                       |
+|`widget`                            | String      | The type of widget is define in this field                                         |
+|`bundleId`                          | String      | The widget bundle id is define in this field                                       |
+|`accountId`                         | String      | Broadage account number is defined in this field                                   |
+|`className` (optional using)        | String      | Assigns class name to main container                                               |
+|`queryStringParse` (optional using) | Object      | Match the URL query string and widget mandatory fields to each other.              |
+|`onActionCallback` (optional using) | Function    | This callback function is triggered by user changed filters, score change etc.     |

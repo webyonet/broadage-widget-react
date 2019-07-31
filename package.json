@@ -1,6 +1,6 @@
 {
   "name": "broadage-widget-react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Broadage widgets react wrapper",
   "scripts": {
     "build": "./node_modules/.bin/babel src --out-dir lib",
@@ -13,7 +13,7 @@
     "react-dom": "^16.0.0"
   },
   "main": "lib/index.js",
-  "homepage": "https://www.broadage.com",
+  "homepage": "https://broadage.com",
   "repository": {
     "type": "git",
     "url": "git@github.com:webyonet/broadage-widget-react.git"

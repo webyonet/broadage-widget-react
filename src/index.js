@@ -19,16 +19,20 @@ export default class BroadageWidget extends Component {
     widgetLoadInterval: Number = 0;
 
     static propTypes = {
-        options: PropTypes.object,
-        className: PropTypes.string,
         bundleId: PropTypes.string.isRequired,
         accountId: PropTypes.string.isRequired,
         widget: PropTypes.string.isRequired,
         requiredFields: PropTypes.object.isRequired,
+        options: PropTypes.object,
+        className: PropTypes.string,
+        queryStringParse: PropTypes.object,
+        onActionCallback: PropTypes.func
     };
 
     static defaultProps = {
         options: {},
+        queryStringParse: {},
+        onActionCallback: Function(),
         className: null
     };
 
@@ -39,6 +43,7 @@ export default class BroadageWidget extends Component {
         bundleId: this.props.bundleId,
         accountId: this.props.accountId,
         widget: this.props.widget,
+        queryStringParse: this.props.queryStringParse,
         requiredFields: this.props.requiredFields
     };
 
@@ -55,18 +60,19 @@ export default class BroadageWidget extends Component {
                     self.insertWidget();
                 }, 0, this);
             }
-        }, 250);
+        }, 100);
     }
 
     componentWillReceiveProps(nextProps: Object): void {
-        const { bundleId, accountId, widget, options, requiredFields, className } = this.state;
+        const { bundleId, accountId, widget, options, requiredFields, className, queryStringParse } = this.state;
 
         const isUpdate = (
             bundleId !== nextProps.bundleId ||
             accountId !== nextProps.accountId ||
             widget !== nextProps.widget ||
             !DeepEquals(options, nextProps.options) ||
-            !DeepEquals(requiredFields, nextProps.requiredFields)
+            !DeepEquals(requiredFields, nextProps.requiredFields) ||
+            !DeepEquals(queryStringParse, nextProps.queryStringParse)
         );
 
         if (isUpdate) {
@@ -77,7 +83,8 @@ export default class BroadageWidget extends Component {
                 accountId: nextProps.accountId,
                 widget: nextProps.widget,
                 options: { ...nextProps.options },
-                requiredFields: { ...nextProps.requiredFields }
+                requiredFields: { ...nextProps.requiredFields },
+                queryStringParse: { ...nextProps.queryStringParse }
             }, () => {
                 setTimeout(self => {
                     self.insertWidget();
@@ -108,7 +115,8 @@ export default class BroadageWidget extends Component {
     }
 
     insertWidget(): void {
-        const { element, bundleId, accountId, widget, options, requiredFields } = this.state;
+        const { element, bundleId, accountId, widget, options, requiredFields, queryStringParse } = this.state;
+        const { onActionCallback } = this.props;
 
         if (window.hasOwnProperty('broadageWidget')) {
             window.broadageWidget.insert({
@@ -122,7 +130,9 @@ export default class BroadageWidget extends Component {
                             ...requiredFields
                         }
                     ]
-                }
+                },
+                queryStringParse,
+                onActionCallback
             });
         }
     }

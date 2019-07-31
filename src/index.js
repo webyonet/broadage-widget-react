@@ -127,12 +127,12 @@ export default class BroadageWidget extends Component {
                         {
                             element,
                             options: { ...options },
-                            ...requiredFields
+                            ...requiredFields,
+                            queryStringParse,
+                            onActionCallback
                         }
                     ]
-                },
-                queryStringParse,
-                onActionCallback
+                }
             });
         }
     }

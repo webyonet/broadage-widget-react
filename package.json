@@ -1,6 +1,6 @@
 {
   "name": "broadage-widget-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Broadage widgets react wrapper",
   "scripts": {
     "build": "./node_modules/.bin/babel src --out-dir lib",

@@ -56,9 +56,7 @@ export default class BroadageWidget extends Component {
         this.widgetLoadInterval = setInterval(() => {
             if (window.hasOwnProperty('broadageWidget')) {
                 clearInterval(this.widgetLoadInterval);
-                setTimeout(self => {
-                    self.insertWidget();
-                }, 0, this);
+                this.insertWidget();
             }
         }, 100);
     }

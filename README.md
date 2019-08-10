@@ -1,6 +1,34 @@
 # broadage-widget-react
 Broadage widgets react wrapper
 
+* Tournament list widget
+* Livescore widget
+* Tournament Info widget
+* Tournament Teams widget
+* Tournament Fixture widget
+* Team Fixture widget
+* Tournament Standings widget
+* Leaderboard widget
+* Leaderboard Points widget
+* Match Summary widget
+* Match Boxscore widget
+* Match Play by Play widget
+* Team Squad widget
+* Team Schedule widget
+* Leaderboard widget
+* Leaderboard Goals widget
+* Leaderboard Assists widget
+* Leaderboard Yellow Cards widget
+* Leaderboard Red Cards widget
+* Team Squad with Statistics widget
+* Timeline widget
+* Lineup widget
+* Formation widget
+* Lead Tracker widget
+* Match Center widget
+* Match Center widget
+* [more](https://www.broadage.com/sports-data-widgets)
+
 ### Installation
 
 `yarn add broadage-widget-react`

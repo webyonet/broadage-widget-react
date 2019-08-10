@@ -107,3 +107,77 @@ export class SampleBasketballMatchCenter extends Component {
 |`className` (optional using)        | String      | Assigns class name to main container                                               |
 |`queryStringParse` (optional using) | Object      | Match the URL query string and widget mandatory fields to each other.              |
 |`onActionCallback` (optional using) | Function    | This callback function is triggered by user changed filters, score change etc.     |
+   
+           
+### Widget type to bundleId
+
+| Type                                         | Bundle Id           |
+|----------------------------------------------|---------------------|
+|`soccerFixture`                               | soccer-fx           |
+|`trioCombo`                                   | all-tc              | 
+|`liveScoreTicker`                             | all-lst             | 
+|`liveScoreDetailed`                           | all-lsd             | 
+|`liveScore`                                   | all-ls              | 
+|`iceHockeyScoreboard`                         | iceHockey-sb        | 
+|`iceHockeyStandings`                          | iceHockey-st        | 
+|`iceHockeyFixture`                            | iceHockey-fx        | 
+|`baseballScoreboard`                          | baseball-sb         | 
+|`baseballStandings`                           | baseball-st         | 
+|`baseballFixture`                             | baseball-fx         | 
+|`footballPlayByPlay`                          | football-pbp        | 
+|`footballGameLeaders`                         | football-gl         | 
+|`footballLiveTeamStatistics`                  | football-ltsts      | 
+|`footballLiveMatchStatistics`                 | football-lmsts      | 
+|`footballBoxScore`                            | football-bs         | 
+|`footballScoreboard`                          | football-sb         | 
+|`footballStandings`                           | football-st         | 
+|`footballFixture`                             | football-fx         | 
+|`volleyballH2hStandings`                      | volleyball-hst      | 
+|`volleyballTeamStandings`                     | volleyball-tst      | 
+|`volleyballStandings`                         | volleyball-st       | 
+|`volleyballTeamSchedule`                      | volleyball-ts       | 
+|`volleyballFixture`                           | volleyball-fx       | 
+|`handballH2hStandings`                        | handball-hst        | 
+|`handballStandings`                           | handball-st         | 
+|`handballTeamSchedule`                        | handball-ts         | 
+|`handballFixture`                             | handball-fx         | 
+|`basketballMatchCenter`                       | basketball-mc       | 
+|`basketballPlayByPlay`                        | basketball-pbp      | 
+|`basketballLiveMatchStatistics`               | basketball-lmsts    | 
+|`basketballGameLeaders`                       | basketball-gl       | 
+|`basketballLeadTracker`                       | basketball-lt       | 
+|`basketballBoxScore`                          | basketball-bs       | 
+|`basketballMatchInfo`                         | basketball-mi       | 
+|`basketballScoreboard`                        | basketball-sb       | 
+|`basketballTeamReboundsLeaderboardPerGame`    | basketball-trlbpg   | 
+|`basketballTeamPointsLeaderboardPerGame`      | basketball-tplbpg   | 
+|`basketballTeamAssistsLeaderboardPerGame`     | basketball-talbpg   | 
+|`basketballLeaderboardReboundsPerGame`        | basketball-lbrpg    | 
+|`basketballLeaderboardAssistsPerGame`         | basketball-lbapg    | 
+|`basketballLeaderboardPointsPerGame`          | basketball-lbppg    | 
+|`basketballSquadStats`                        | basketball-sqs      | 
+|`basketballH2hStandings`                      | basketball-hst      | 
+|`basketballTeamStandings`                     | basketball-tst      | 
+|`basketballStandings`                         | basketball-st       | 
+|`basketballTeamSchedule`                      | basketball-ts       | 
+|`basketballFixture`                           | basketball-fx       | 
+|`soccerMatchCenter`                           | soccer-mc           | 
+|`soccerMatchInfo`                             | soccer-mi           | 
+|`soccerFormation`                             | soccer-fmt          | 
+|`soccerLineup`                                | soccer-lu           | 
+|`soccerTimeline`                              | soccer-tl           | 
+|`soccerLiveMatchStatistics`                   | soccer-lmsts        | 
+|`soccerScoreboard`                            | soccer-sb           | 
+|`soccerCommentary`                            | soccer-cm           | 
+|`soccerLiveFixture`                           | soccer-lfx          | 
+|`soccerTeamCardsLeaderboard`                  | soccer-tclb         | 
+|`soccerTeamAssistsLeaderboard`                | soccer-talb         | 
+|`soccerTeamGoalsLeaderboard`                  | soccer-tglb         | 
+|`soccerLeaderboardCards`                      | soccer-lbc          | 
+|`soccerLeaderboardAssists`                    | soccer-lba          | 
+|`soccerLeaderboardGoals`                      | soccer-lbg          | 
+|`soccerSquadStats`                            | soccer-sqs          | 
+|`soccerH2hStandings`                          | soccer-hst          | 
+|`soccerTeamStandings`                         | soccer-tst          | 
+|`soccerStandings`                             | soccer-st           | 
+|`soccerTeamSchedule`                          | soccer-ts           | 

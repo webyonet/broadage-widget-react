@@ -1,6 +1,6 @@
 {
   "name": "broadage-widget-react",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Broadage widgets react wrapper",
   "scripts": {
     "build": "./node_modules/.bin/babel src --out-dir lib",
@@ -19,13 +19,13 @@
     "url": "git@github.com:webyonet/broadage-widget-react.git"
   },
   "dependencies": {
-    "deep-equal": "^1.0.1",
+    "deep-equal": "^1.1.0",
     "prop-types": "^15.7.2",
     "react-addons-shallow-compare": "^15.6.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-function-bind": "^7.2.0",
     "@babel/plugin-syntax-class-properties": "^7.2.0",
@@ -33,27 +33,27 @@
     "@babel/plugin-syntax-import-meta": "^7.2.0",
     "@babel/plugin-syntax-object-rest-spread": "^7.2.0",
     "@babel/plugin-transform-arrow-functions": "^7.2.0",
-    "@babel/plugin-transform-flow-comments": "^7.5.5",
+    "@babel/plugin-transform-flow-comments": "^7.6.0",
     "@babel/plugin-transform-flow-strip-types": "^7.4.4",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-env": "^7.6.0",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-eslint": "^10.0.2",
+    "babel-eslint": "^10.0.3",
     "babel-helper-evaluate-path": "^0.5.0",
     "babel-plugin-minify-numeric-literals": "^0.4.3",
     "babel-plugin-transform-merge-sibling-variables": "^6.9.4",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "babel-plugin-transform-remove-debugger": "^6.9.4",
-    "babel-preset-minify": "^0.5.0",
-    "eslint": "^6.1.0",
+    "babel-preset-minify": "^0.5.1",
+    "eslint": "^6.3.0",
     "eslint-config-babel": "^9.0.0",
     "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-flowtype": "^3.12.1",
+    "eslint-plugin-flowtype": "^4.3.0",
     "eslint-plugin-jsx-control-statements": "^2.2.1",
     "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.6.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "keywords": [
     "broadage",

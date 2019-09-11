@@ -61,7 +61,7 @@ export default class BroadageWidget extends Component {
         }, 100);
     }
 
-    componentWillReceiveProps(nextProps: Object): void {
+    UNSAFE_componentWillReceiveProps(nextProps: Object): void {
         const { bundleId, accountId, widget, options, requiredFields, className, queryStringParse } = this.state;
 
         const isUpdate = (

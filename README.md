@@ -295,7 +295,6 @@ In the json object below:
    liveScore: "all-ls",
    liveScoreDetailed: "all-lsd",
    liveScoreTicker: "all-lst",
-   customWidget: "all-cw",
    trioCombo: "all-tc"
 }
 

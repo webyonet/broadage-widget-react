@@ -49,26 +49,25 @@ Broadage widgets react wrapper
 import React, { Component } from 'react';
 import BroadageWidget from 'broadage-widget-react';
 
-export class SampleSoccerFixture extends Component {
-     onActionCallback = (widgetType, actionType, actionPayload) => {
+export default function SampleSoccerFixture() {
+    const onActionCallback = (widgetType, actionType, actionPayload) => {
         console.log(widgetType, actionType, actionPayload);
-     };
+    };
+
+    // Soccer Fixture Sample
     
-     render() {
-         // Soccer Fixture Sample
-         return (
-             <BroadageWidget
-                 requiredFields={{ tournamentId: 1 }}
-                 options={{ lang: 'en-US' }}
-                 widget="soccerFixture"
-                 bundleId="soccer-fx"
-                 accountId="0000-0000-0000"
-                 className="widget-wrapper"
-                 queryStringParse={{ tournamentId: "tid" }}
-                 onActionCallback={this.onActionCallback}
-             />
-         )
-     }
+    return (
+        <BroadageWidget
+            requiredFields={{ tournamentId: 1 }}
+            options={{ lang: 'en-US' }}
+            widget="soccerFixture"
+            bundleId="soccer-fx"
+            accountId="0000-0000-0000"
+            className="widget-wrapper"
+            queryStringParse={{ tournamentId: "tid" }}
+            onActionCallback={this.onActionCallback}
+        />
+    )
 }
 
 export class SampleBasketballMatchCenter extends Component {

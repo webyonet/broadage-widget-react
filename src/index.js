@@ -15,6 +15,8 @@ import DeepEquals from 'deep-equal';
     b['broadage'].push({ 'bundleId': o.bundleId, 'widgets': o.widgets, 'accountId': o.accountId });
 })(window, 'script', '//cdn-saas.broadage.com/widgets/loader/loader.js', {});
 
+const canUseDOM = !!((typeof window !== 'undefined' && window.document && window.document.createElement));
+
 export default class BroadageWidget extends Component {
     widgetLoadInterval: Number = 0;
 
@@ -49,7 +51,10 @@ export default class BroadageWidget extends Component {
 
     constructor(props: Object): void {
         super(props);
-        this.widgetLoad();
+
+        if(canUseDOM){
+            this.widgetLoad();
+        }
     }
 
     widgetLoad(): void {

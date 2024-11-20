@@ -129,8 +129,8 @@ export default function ChangeOptionsSample() {
             </a>
             
             <BroadageWidget
-                requiredFields={{ tournamentId: 1 }}
-                options={{ lang: 'en-US' }}
+                requiredFields={requiredFields}
+                options={options}
                 widget="soccerFixture"
                 bundleId="soccer-fx"
                 accountId="0000-0000-0000"

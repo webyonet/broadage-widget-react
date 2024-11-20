@@ -46,7 +46,7 @@ Broadage widgets react wrapper
 ### Usage
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component, Fragment, useState } from 'react';
 import BroadageWidget from 'broadage-widget-react';
 
 export default function SampleSoccerFixture() {
@@ -55,7 +55,7 @@ export default function SampleSoccerFixture() {
     };
 
     // Soccer Fixture Sample
-    
+
     return (
         <BroadageWidget
             requiredFields={{ tournamentId: 1 }}
@@ -64,32 +64,82 @@ export default function SampleSoccerFixture() {
             bundleId="soccer-fx"
             accountId="0000-0000-0000"
             className="widget-wrapper"
-            queryStringParse={{ tournamentId: "tid" }}
-            onActionCallback={this.onActionCallback}
+            queryStringParse={{ tournamentId: 'tid' }}
+            onActionCallback={onActionCallback}
         />
-    )
+    );
 }
 
 export class SampleBasketballMatchCenter extends Component {
-     onActionCallback = (widgetType, actionType, actionPayload) => {
-         console.log(widgetType, actionType, actionPayload);
-     };
-     
-     render() {
-         // Basketball Match Center Sample
-         return (
-             <BroadageWidget
-                 requiredFields={{ matchId: 286298 }}
-                 options={{ lang: 'fr-FR', theme: "darkBlue" }}
-                 widget="basketballMatchCenter"
-                 bundleId="basketball-mc"
-                 accountId="0000-0000-0000"
-                 className="widget-wrapper"
-                 queryStringParse={{ matchId: "mid" }}
-                 onActionCallback={this.onActionCallback}
-             />
-         )
-     }
+    onActionCallback = (widgetType, actionType, actionPayload) => {
+        console.log(widgetType, actionType, actionPayload);
+    };
+
+    render() {
+        // Basketball Match Center Sample
+        return (
+            <BroadageWidget
+                requiredFields={{ matchId: 286298 }}
+                options={{ lang: 'fr-FR', theme: 'darkBlue' }}
+                widget="basketballMatchCenter"
+                bundleId="basketball-mc"
+                accountId="0000-0000-0000"
+                className="widget-wrapper"
+                queryStringParse={{ matchId: 'mid' }}
+                onActionCallback={this.onActionCallback}
+            />
+        );
+    }
+}
+
+export default function ChangeOptionsSample() {
+    const [options, setOptions] = useState({ lang: 'en-US' });
+    const [requiredFields, setRequiredFields] = useState({ tournamentId: 1 });
+    
+    const onActionCallback = (widgetType, actionType, actionPayload) => {
+        console.log(widgetType, actionType, actionPayload);
+    };
+
+    const onChangeRequiredFields = () => {
+        setRequiredFields(previousState => {
+            return { ...previousState, tournamentId: 3 };
+        });
+    };
+
+    const onChangeOptions = () => {
+        setOptions(previousState => {
+            previousState.lang = 'tr-TR';
+            previousState.theme = 'darkBlue';
+            previousState.regionalMatchViewType = 'american';
+
+            return { ...previousState };
+        });
+    };
+
+    return (
+        <Fragment>
+            {/* Change Tournament */}
+            <a onClick={onChangeRequiredFields}>
+                Change Torunament
+            </a>
+            
+            {/* Change Lang, Theme, Regional Match View Type */}
+            <a onClick={onChangeOptions}>
+                Change Optional Fields
+            </a>
+            
+            <BroadageWidget
+                requiredFields={{ tournamentId: 1 }}
+                options={{ lang: 'en-US' }}
+                widget="soccerFixture"
+                bundleId="soccer-fx"
+                accountId="0000-0000-0000"
+                className="widget-wrapper"
+                queryStringParse={{ tournamentId: 'tid' }}
+                onActionCallback={onActionCallback}
+            />
+        </Fragment>
+    );
 }
 ```
 

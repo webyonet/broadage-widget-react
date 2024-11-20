@@ -106,7 +106,10 @@ export default class BroadageWidget extends Component {
 
     componentWillUnmount(): void {
         clearInterval(this.widgetLoadInterval);
-        this.removeWidget();
+
+        if(canUseDOM){
+            this.removeWidget();
+        }
     }
 
     removeWidget(): void {

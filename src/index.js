@@ -49,10 +49,8 @@ export default class BroadageWidget extends Component {
         requiredFields: this.props.requiredFields
     };
 
-    constructor(props: Object): void {
-        super(props);
-
-        if(canUseDOM){
+    componentDidMount(): void {
+        if (canUseDOM) {
             this.widgetLoad();
         }
     }
@@ -107,7 +105,7 @@ export default class BroadageWidget extends Component {
     componentWillUnmount(): void {
         clearInterval(this.widgetLoadInterval);
 
-        if(canUseDOM){
+        if (canUseDOM) {
             this.removeWidget();
         }
     }
